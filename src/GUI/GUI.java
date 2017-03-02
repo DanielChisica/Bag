@@ -32,10 +32,11 @@ public class GUI extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arma principal", "Arma de resoaldo", "Municion", "Alimento", "Bebido", "Medio de comunicacion" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arma principal", "Arma de repaldo", "Municion", "Alimento", "Bebido", "Medio de comunicacion" }));
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Chequear");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -48,10 +49,10 @@ public class GUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addComponent(jButton1)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -60,12 +61,12 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         int selection=jComboBox1.getSelectedIndex();
@@ -77,7 +78,7 @@ public class GUI extends javax.swing.JFrame {
       break; // optional
    
    case 1 :
-      bag1.añadir("Arma secundaria", "Arma de resoaldo", 2);// Statements
+      bag1.añadir("Arma secundaria", "Arma de repaldo", 2);// Statements
       break; // optional
    
       case 2 :
@@ -109,7 +110,7 @@ public class GUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Ya tiene el equipamiento");
         }
         else {
-            
+            /**
             Conjunt difference=bag1.getDummyBag().Difference(bag1.getBag());
             String elements;
             elements="";
@@ -119,7 +120,8 @@ public class GUI extends javax.swing.JFrame {
                 }
                 
             }
-            JOptionPane.showMessageDialog(null, "Le faltan elementos necesarios"+elements);
+            */
+            JOptionPane.showMessageDialog(null, "Le faltan elementos necesarios");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
